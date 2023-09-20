@@ -1,3 +1,8 @@
+import classNames from "classnames"
+
 export const BorderRadiusPreview = () => {
-  return <div>BorderRadiusPreview</div>
+  const previewClassNames = classNames('previewBox', {
+
+  })
+  return <div className={ previewClassNames }>PREVIEW BOX</div>
 }

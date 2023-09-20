@@ -1,1 +1,19 @@
-@import '../node_modules/bootstrap/scss/bootstrap.scss'
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+:root {
+  --main-color: rgb(84, 19, 146);
+}
+
+.previewBox {
+  margin: 2rem 0;
+  min-height: 10rem;
+  border: 0.2em solid var(--main-color);
+
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--main-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
