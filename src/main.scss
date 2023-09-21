@@ -24,3 +24,12 @@
   padding: 1rem;
   font-size: 1.2rem;
 }
+
+.infoAlert {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  pointer-events: none;
+  user-select: none;
+}
