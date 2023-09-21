@@ -12,8 +12,13 @@ export const PreviewCode = (props: TPreviewCodeProps) => {
 }`
 
   return (
-    <pre>
-      { previewCSSBlock }
-    </pre>
+    <>
+      <h2>Generated Code</h2>
+      <pre className="previewCode">
+        <code>
+          { previewCSSBlock }
+        </code>
+      </pre>
+    </>
   )
 }

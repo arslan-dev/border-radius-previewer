@@ -10,8 +10,24 @@ function App() {
   }
   return (
     <div className="container">
-      <PreviewBox data={radiusData} /> 
-      <PreviewCode data={radiusData} />
+      <div className="row">
+        <div className="col">
+          <h1 className="display-1">Border-radius Previewer</h1>
+          <p>A solution to <a href="https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Border-Radius-Previewer.md">this problem.</a></p>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <PreviewBox data={radiusData} /> 
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <PreviewCode data={radiusData} />
+        </div>
+      </div>
     </div>
   )
 }
