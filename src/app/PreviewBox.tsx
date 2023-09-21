@@ -10,5 +10,6 @@ export const PreviewBox = (props: TPreviewBoxProps) => {
   const styles = {
     borderRadius: borderRadiusCSSPropVal
   }
+
   return <div className="previewBox" style={styles}>PREVIEW BOX</div>
 }

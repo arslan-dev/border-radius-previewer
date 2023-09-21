@@ -1,3 +1,4 @@
+import { CopyToClipboardButton } from "./CopyToClipboardButton"
 import TBorderRadiusData from "./TBorderRadius"
 import { borderRadius2CSSPropVal } from "./utilities"
 
@@ -11,10 +12,15 @@ export const PreviewCode = (props: TPreviewCodeProps) => {
   border-radius: ${borderRadiusCSSPropVal};
 }`
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(previewCSSBlock)
+  }
+
   return (
     <>
       <h2>Generated Code</h2>
       <pre className="previewCode">
+        <CopyToClipboardButton onClick={copyToClipboard} />
         <code>
           { previewCSSBlock }
         </code>
