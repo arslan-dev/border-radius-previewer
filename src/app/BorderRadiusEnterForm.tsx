@@ -1,5 +1,6 @@
 import TBorderRadiusData from "./TBorderRadius"
 import type { Dispatch, SetStateAction } from "react"
+import { CornerValueInput } from "./CornerValueInput"
 
 export interface TBorderRadiusEnterFormProps {
   radiusData: TBorderRadiusData
@@ -7,21 +8,34 @@ export interface TBorderRadiusEnterFormProps {
 }
 
 export const BorderRadiusEnterForm = (props: TBorderRadiusEnterFormProps) => {
+
+  const setCornerValue = (key: string) => (value: number) => {
+    props.setRadiusData({...props.radiusData, [key]: value})
+  }
+  
   return (
-    <div className="input-group mb-3">
-      <div className="input-group-prepend">
-        <span className="input-group-text" id="basic-addon1">@</span>
+    <>
+      <div className="row">
+        <div className="col-6">
+          <CornerValueInput label="Border Top Left X" value={props.radiusData.topLeft_x} setValue={setCornerValue("topLeft_x")} />
+          <CornerValueInput label="Border Top Left Y" value={props.radiusData.topLeft_y} setValue={setCornerValue("topLeft_y")} />
+        </div>
+        <div className="col-6">
+          <CornerValueInput label="Border Top Right X" value={props.radiusData.topRight_x} setValue={setCornerValue("topRight_x")} />
+          <CornerValueInput label="Border Top Right Y" value={props.radiusData.topRight_y} setValue={setCornerValue("topRight_y")} />
+        </div>
       </div>
-      <input
-        type="number"
-        className="form-control"
-        placeholder="0"
-        aria-label="Border Top Left X"
-        value={props.radiusData.topLeft_x}
-        onChange={e => {
-          props.setRadiusData({...props.radiusData, topLeft_x: parseInt(e.target.value)})
-        }}
-      />
-    </div>
+
+      <div className="row">
+        <div className="col-6">
+          <CornerValueInput label="Border Bottom Left X" value={props.radiusData.bottomLeft_x} setValue={setCornerValue("bottomLeft_x")} />
+          <CornerValueInput label="Border Bottom Left Y" value={props.radiusData.bottomLeft_y} setValue={setCornerValue("bottomLeft_y")} />
+        </div>
+        <div className="col-6">
+          <CornerValueInput label="Border Bottom Right X" value={props.radiusData.bottomRight_x} setValue={setCornerValue("bottomRight_x")} />
+          <CornerValueInput label="Border Bottom Right Y" value={props.radiusData.bottomRight_y} setValue={setCornerValue("bottomRight_y")} />
+        </div>
+      </div>
+    </>
   )
 }

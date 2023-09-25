@@ -1,5 +1,3 @@
-import type TBorderRadiusData from "./app/TBorderRadius"
-
 import { PreviewBox } from "./app/PreviewBox"
 import { PreviewCode } from "./app/PreviewCode"
 import { useState } from "react"
@@ -18,11 +16,7 @@ function App() {
         </div>
       </div>
 
-      <div className="row">
-        <div className="col">
-          <BorderRadiusEnterForm radiusData={radiusData} setRadiusData={setRadiusData} />
-        </div>
-      </div>
+      <BorderRadiusEnterForm radiusData={radiusData} setRadiusData={setRadiusData} />
 
       <div className="row">
         <div className="col">
