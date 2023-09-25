@@ -17,3 +17,12 @@ export function borderRadiusDataZero(): TBorderRadiusData {
     bottomLeft_y: 0 
   }
 }
+
+export function parseNumber(v: string): number {
+  const res = parseInt(v)
+  if (isNaN(res)) {
+    return 0
+  } else {
+    return res
+  }
+}
