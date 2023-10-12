@@ -7,14 +7,14 @@ export function borderRadius2CSSPropVal(borderRadiusData: TBorderRadiusData) {
 
 export function borderRadiusDataZero(): TBorderRadiusData {
   return {
-    topLeft_x: 0, 
-    topLeft_y: 0, 
-    topRight_x: 0, 
-    topRight_y: 0, 
-    bottomRight_x: 0, 
-    bottomRight_y: 0, 
-    bottomLeft_x: 0, 
-    bottomLeft_y: 0 
+    topLeft_x: 50, 
+    topLeft_y: 80, 
+    topRight_x: 80, 
+    topRight_y: 50, 
+    bottomRight_x: 50, 
+    bottomRight_y: 80, 
+    bottomLeft_x: 80, 
+    bottomLeft_y: 50 
   }
 }
 
